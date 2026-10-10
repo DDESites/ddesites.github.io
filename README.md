@@ -85,7 +85,7 @@ site e devem ser preenchidos antes da publicação:
 - [ ] **Textos institucionais finais** — história e propósito em `sobre.html`.
 - [ ] **Preços, planos e condições** — não exibidos, conforme o PRD. Só adicionar se definidos.
 - [ ] **Destino do formulário** — ver seção anterior.
-- [ ] **Domínio** — atualizar `robots.txt`, `sitemap.xml` e os `url` do JSON-LD.
+- [x] **Domínio** — publicado em https://ddesites.github.io/ (obots.txt, sitemap.xml e JSON-LD atualizados).
 
 ## Checklist antes de publicar
 
