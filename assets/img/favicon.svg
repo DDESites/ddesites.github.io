@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" role="img" aria-label="DDE Sites">
+  <defs>
+    <linearGradient id="ddeGrad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#149ED0"/>
+      <stop offset="1" stop-color="#063B55"/>
+    </linearGradient>
+  </defs>
+  <rect width="48" height="48" rx="14" fill="url(#ddeGrad)"/>
+  <text x="24" y="26" text-anchor="middle" textLength="26" lengthAdjust="spacingAndGlyphs" font-family="Sora, 'Segoe UI', Arial, sans-serif" font-size="13" font-weight="700" fill="#FFFFFF">DDE</text>
+<rect x="14" y="29.5" width="20" height="3" rx="1.5" fill="#F5A623"/>
+</svg>

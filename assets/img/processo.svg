@@ -1,0 +1,77 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 420" role="img" aria-label="Ilustração do processo de criação de site em quatro etapas conectadas">
+  <defs>
+    <linearGradient id="bgProc" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#EAF5FA"/>
+      <stop offset="1" stop-color="#D2EAF6"/>
+    </linearGradient>
+    <filter id="sProc" x="-25%" y="-25%" width="150%" height="160%">
+      <feDropShadow dx="0" dy="12" stdDeviation="14" flood-color="#063B55" flood-opacity="0.16"/>
+    </filter>
+  </defs>
+  <rect width="760" height="420" rx="28" fill="url(#bgProc)"/>
+  <circle cx="686" cy="66" r="54" fill="#75C9E8" opacity="0.5"/>
+  <circle cx="72" cy="364" r="48" fill="#28B7A4" opacity="0.3"/>
+
+  <!-- Linha conectora -->
+  <path d="M132 168h140M352 168h140M572 168h60" stroke="#75C9E8" stroke-width="4" stroke-linecap="round" stroke-dasharray="10 12"/>
+
+  <!-- Etapa 1 -->
+  <g filter="url(#sProc)">
+    <rect x="56" y="96" width="140" height="148" rx="18" fill="#FFFFFF"/>
+    <circle cx="126" cy="146" r="26" fill="#149ED0" opacity="0.16"/>
+    <path d="M116 138h20M116 146h20M116 154h12" stroke="#0F7FA9" stroke-width="3.4" stroke-linecap="round"/>
+    <rect x="82" y="186" width="88" height="10" rx="5" fill="#063B55" opacity="0.85"/>
+    <rect x="82" y="206" width="66" height="8" rx="4" fill="#9FC3D4"/>
+    <rect x="82" y="222" width="76" height="8" rx="4" fill="#9FC3D4"/>
+    <rect x="66" y="82" width="46" height="24" rx="12" fill="#F5A623"/>
+    <text x="89" y="99" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="13" font-weight="700" fill="#04293C">01</text>
+  </g>
+
+  <!-- Etapa 2 -->
+  <g filter="url(#sProc)">
+    <rect x="276" y="96" width="140" height="148" rx="18" fill="#FFFFFF"/>
+    <circle cx="346" cy="146" r="26" fill="#28B7A4" opacity="0.2"/>
+    <rect x="332" y="130" width="28" height="34" rx="5" fill="none" stroke="#1C9484" stroke-width="3"/>
+    <path d="M338 142h16M338 150h16M338 158h10" stroke="#1C9484" stroke-width="2.6" stroke-linecap="round"/>
+    <rect x="302" y="186" width="88" height="10" rx="5" fill="#063B55" opacity="0.85"/>
+    <rect x="302" y="206" width="66" height="8" rx="4" fill="#9FC3D4"/>
+    <rect x="302" y="222" width="76" height="8" rx="4" fill="#9FC3D4"/>
+    <rect x="286" y="82" width="46" height="24" rx="12" fill="#F5A623"/>
+    <text x="309" y="99" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="13" font-weight="700" fill="#04293C">02</text>
+  </g>
+
+  <!-- Etapa 3 -->
+  <g filter="url(#sProc)">
+    <rect x="496" y="96" width="140" height="148" rx="18" fill="#FFFFFF"/>
+    <circle cx="566" cy="146" r="26" fill="#149ED0" opacity="0.16"/>
+    <path d="M556 136l-9 10 9 10M576 136l9 10-9 10" fill="none" stroke="#0F7FA9" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"/>
+    <rect x="522" y="186" width="88" height="10" rx="5" fill="#063B55" opacity="0.85"/>
+    <rect x="522" y="206" width="66" height="8" rx="4" fill="#9FC3D4"/>
+    <rect x="522" y="222" width="76" height="8" rx="4" fill="#9FC3D4"/>
+    <rect x="506" y="82" width="46" height="24" rx="12" fill="#F5A623"/>
+    <text x="529" y="99" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="13" font-weight="700" fill="#04293C">03</text>
+  </g>
+
+  <!-- Etapa 4 -->
+  <g filter="url(#sProc)">
+    <rect x="604" y="264" width="120" height="120" rx="18" fill="#063B55"/>
+    <circle cx="664" cy="312" r="26" fill="#28B7A4" opacity="0.3"/>
+    <path d="M664 298v28M654 310l10-10 10 10" fill="none" stroke="#7BE3D3" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M650 336h28" stroke="#7BE3D3" stroke-width="3.4" stroke-linecap="round"/>
+    <rect x="622" y="352" width="84" height="9" rx="4.5" fill="#FFFFFF" opacity="0.9"/>
+    <rect x="622" y="368" width="60" height="8" rx="4" fill="#75C9E8"/>
+    <rect x="614" y="250" width="46" height="24" rx="12" fill="#F5A623"/>
+    <text x="637" y="267" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="13" font-weight="700" fill="#04293C">04</text>
+  </g>
+
+  <!-- Cartão de contato -->
+  <g filter="url(#sProc)">
+    <rect x="56" y="272" width="330" height="104" rx="18" fill="#FFFFFF"/>
+    <circle cx="106" cy="324" r="26" fill="#F5A623" opacity="0.26"/>
+    <path d="M96 314h20v14a8 8 0 0 1-8 8h-4a8 8 0 0 1-8-8z" fill="none" stroke="#DD8D0A" stroke-width="3" stroke-linejoin="round"/>
+    <path d="M96 314l10 9 10-9" fill="none" stroke="#DD8D0A" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+    <rect x="148" y="300" width="180" height="13" rx="6.5" fill="#063B55"/>
+    <rect x="148" y="322" width="212" height="9" rx="4.5" fill="#9FC3D4"/>
+    <rect x="148" y="340" width="150" height="9" rx="4.5" fill="#9FC3D4"/>
+  </g>
+</svg>

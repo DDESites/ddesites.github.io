@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="no-js">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Solicitar orçamento — Pedido de orçamento de site | DDE Sites</title>
+  <meta name="description" content="Envie seu pedido de orçamento de site: nome, empresa, contato, tipo de site desejado e uma breve descrição do projeto. Retorno com escopo, etapas e prazo.">
+  <meta name="theme-color" content="#063B55">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="pt_BR">
+  <meta property="og:site_name" content="DDE Sites">
+  <meta property="og:title" content="Solicitar orçamento | DDE Sites">
+  <meta property="og:description" content="Conte o que você precisa em poucos campos e receba uma proposta de escopo, etapas e prazo.">
+  <meta property="og:image" content="assets/img/hero.svg">
+  <link rel="icon" type="image/svg+xml" href="assets/img/favicon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Sora:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ContactPage",
+    "name": "Solicitar orçamento — DDE Sites",
+    "url": "https://ddesites.github.io/orcamento.html"
+  }
+  </script>
+</head>
+<body>
+  <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
+
+  <header class="site-header" data-header>
+    <div class="container header__inner">
+      <a class="brand" href="index.html">
+        <svg class="brand__mark" viewBox="0 0 48 48" aria-hidden="true" focusable="false">
+          <defs>
+            <linearGradient id="marcaGrad" x1="0" y1="0" x2="1" y2="1">
+              <stop offset="0" stop-color="#149ED0"/>
+              <stop offset="1" stop-color="#063B55"/>
+            </linearGradient>
+          </defs>
+          <rect width="48" height="48" rx="14" fill="url(#marcaGrad)"/>
+          <text x="24" y="26" text-anchor="middle" textLength="26" lengthAdjust="spacingAndGlyphs" font-family="Sora, 'Segoe UI', Arial, sans-serif" font-size="13" font-weight="700" fill="#FFFFFF">DDE</text>
+<rect x="14" y="29.5" width="20" height="3" rx="1.5" fill="#F5A623"/>
+        </svg>
+        <span class="brand__text">
+          <span class="brand__nome">DDE <span>Sites</span></span>
+          <span class="brand__tag">Sites para empresas</span>
+        </span>
+      </a>
+
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="menu-principal" aria-label="Abrir menu">
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+      </button>
+
+      <nav class="nav" id="menu-principal" aria-label="Navegação principal">
+        <a class="nav__link" href="index.html">Início</a>
+        <a class="nav__link" href="servicos.html">Serviços</a>
+        <a class="nav__link" href="projetos.html">Projetos</a>
+        <a class="nav__link" href="como-funciona.html">Como funciona</a>
+        <a class="nav__link" href="sobre.html">Sobre</a>
+        <a class="btn btn--primary btn--sm nav__cta" href="orcamento.html" aria-current="page">Solicitar orçamento</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="conteudo">
+    <section class="pagina-hero">
+      <div class="container">
+        <ol class="trilha" aria-label="Você está em">
+          <li><a href="index.html">Início</a></li>
+          <li><span aria-current="page">Solicitar orçamento</span></li>
+        </ol>
+        <span class="eyebrow">Contato</span>
+        <h1>Solicite um orçamento para o seu site</h1>
+        <p class="lead">Preencha os campos abaixo com as informações do projeto. Retornamos com uma proposta de escopo, etapas e prazo — sem compromisso.</p>
+      </div>
+    </section>
+
+    <section class="secao secao--branco">
+      <div class="container">
+        <div class="grade grade--2" style="align-items:start;gap:clamp(28px,4vw,56px);">
+          <!-- Formulário -->
+          <div class="reveal">
+            <form class="formulario" data-formulario novalidate>
+              <div class="formulario__conteudo">
+                <div class="formulario__grade">
+
+                  <div class="campo">
+                    <label for="nome">Nome <span class="obrig" aria-hidden="true">*</span></label>
+                    <input type="text" id="nome" name="nome" autocomplete="name" placeholder="Como podemos chamar você?" required aria-describedby="erro-nome">
+                    <span class="campo__erro" data-erro-for="nome" id="erro-nome"></span>
+                  </div>
+
+                  <div class="campo">
+                    <label for="empresa">Empresa <span class="obrig" aria-hidden="true">*</span></label>
+                    <input type="text" id="empresa" name="empresa" autocomplete="organization" placeholder="Nome da empresa ou do projeto" required aria-describedby="erro-empresa">
+                    <span class="campo__erro" data-erro-for="empresa" id="erro-empresa"></span>
+                  </div>
+
+                  <div class="campo campo--cheio">
+                    <label for="contato">E-mail ou telefone <span class="obrig" aria-hidden="true">*</span></label>
+                    <input type="text" id="contato" name="contato" autocomplete="email" inputmode="email" placeholder="voce@empresa.com.br ou (00) 00000-0000" required aria-describedby="dica-contato erro-contato">
+                    <span class="campo__dica" id="dica-contato">Informe um canal para retornarmos. Aceitamos e-mail ou telefone com DDD.</span>
+                    <span class="campo__erro" data-erro-for="contato" id="erro-contato"></span>
+                  </div>
+
+                  <div class="campo campo--cheio">
+                    <label for="tipo">Tipo de site desejado <span class="obrig" aria-hidden="true">*</span></label>
+                    <select id="tipo" name="tipo" required aria-describedby="erro-tipo">
+                      <option value="">Selecione a opção</option>
+                      <option value="institucional">Site institucional</option>
+                      <option value="loja">Loja virtual</option>
+                      <option value="landing">Landing page</option>
+                      <option value="redesign">Redesign (reformulação de site atual)</option>
+                      <option value="manutencao">Manutenção e melhorias</option>
+                      <option value="nao-sei">Ainda não sei — preciso de orientação</option>
+                    </select>
+                    <span class="campo__erro" data-erro-for="tipo" id="erro-tipo"></span>
+                  </div>
+
+                  <div class="campo campo--cheio">
+                    <label for="descricao">Breve descrição do projeto <span class="obrig" aria-hidden="true">*</span></label>
+                    <textarea id="descricao" name="descricao" rows="6" placeholder="Conte o que a empresa faz, o que o site precisa resolver e se existe prazo." required aria-describedby="dica-descricao erro-descricao"></textarea>
+                    <span class="campo__dica" id="dica-descricao">Mínimo de 20 caracteres. Quanto mais contexto, mais precisa fica a proposta.</span>
+                    <span class="campo__erro" data-erro-for="descricao" id="erro-descricao"></span>
+                  </div>
+
+                  <!-- Proteção contra envios automatizados -->
+                  <div class="honeypot" aria-hidden="true">
+                    <label for="website">Não preencha este campo</label>
+                    <input type="text" id="website" name="website" tabindex="-1" autocomplete="off">
+                  </div>
+
+                  <label class="formulario__aceite" for="aceite">
+                    <input type="checkbox" id="aceite" name="aceite" required>
+                    <span>Autorizo o uso dos meus dados para retorno deste pedido, conforme a <a href="privacidade.html">política de privacidade</a>.</span>
+                  </label>
+
+                  <span class="campo__erro" data-erro-for="aceite" id="erro-aceite" style="grid-column:1 / -1;"></span>
+
+                  <div class="formulario__rodape">
+                    <p data-erro-geral role="alert" style="color:#A93226;font-weight:600;"></p>
+                    <button class="btn btn--primary btn--lg" type="submit">
+                      Enviar pedido de orçamento
+                      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+                    </button>
+                  </div>
+
+                </div>
+              </div>
+
+              <div class="formulario__ok" role="status" aria-live="polite">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <circle cx="12" cy="12" r="10"/>
+                  <path d="M8 12.5l2.6 2.6L16 9.7"/>
+                </svg>
+                <h2>Pedido enviado com sucesso</h2>
+                <p>Recebemos as informações do seu projeto. Nossa equipe vai analisar o pedido e retornar pelo canal informado, com uma proposta de escopo, etapas e prazo.</p>
+                <div class="btn-row">
+                  <a class="btn btn--escuro" href="projetos.html">Ver projetos</a>
+                  <a class="btn btn--contorno" href="index.html">Voltar ao início</a>
+                </div>
+              </div>
+            </form>
+
+            <p class="campo__dica" style="margin-top:16px;">
+              Os campos marcados com <span style="color:var(--laranja-600);font-weight:700;">*</span> são obrigatórios. Seus dados são usados apenas para responder a este pedido.
+            </p>
+          </div>
+
+          <!-- Lateral de apoio -->
+          <aside class="reveal" data-delay="1">
+            <ul class="destaque-lista">
+              <li>
+                <div class="cartao__icone" style="margin-bottom:0;">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 8v4l3 2"/><circle cx="12" cy="12" r="9"/></svg>
+                </div>
+                <div>
+                  <strong>O que acontece depois do envio</strong>
+                  <p>Analisamos o pedido, fazemos as perguntas necessárias e retornamos com escopo, etapas e prazo. Nada é cobrado antes do combinado.</p>
+                </div>
+              </li>
+              <li>
+                <div class="cartao__icone cartao__icone--verde" style="margin-bottom:0;">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg>
+                </div>
+                <div>
+                  <strong>Sem compromisso</strong>
+                  <p>O pedido de orçamento não gera qualquer cobrança ou vínculo. Você decide depois de ver a proposta.</p>
+                </div>
+              </li>
+              <li>
+                <div class="cartao__icone cartao__icone--laranja" style="margin-bottom:0;">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2.5" y="4" width="19" height="14" rx="2"/><path d="M2.5 8.5h19"/></svg>
+                </div>
+                <div>
+                  <strong>Elementos de confiança</strong>
+                  <p>Quer conhecer o processo antes? Veja as <a href="como-funciona.html">quatro etapas</a> e os <a href="projetos.html">projetos</a> que já fizemos.</p>
+                </div>
+              </li>
+            </ul>
+
+            <div id="canais" style="margin-top:26px;scroll-margin-top:calc(var(--header-h) + 20px);">
+              <h2 style="font-size:1.2rem;">Outros canais</h2>
+              <div class="grade grade--1" style="gap:14px;">
+                <a class="canal" href="mailto:contato@ddesites.com.br">
+                  <span class="canal__icone">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2.5" y="4.5" width="19" height="15" rx="2"/><path d="M3 6l9 7 9-7"/></svg>
+                  </span>
+                  <span>
+                    <strong>E-mail</strong>
+                    <span>contato@ddesites.com.br</span>
+                  </span>
+                </a>
+
+                <a class="canal" href="https://wa.me/5561998249527?text=Ol%C3%A1!%20Vim%20pelo%20site%20da%20DDE%20Sites%20e%20gostaria%20de%20um%20or%C3%A7amento." target="_blank" rel="noopener">
+                  <span class="canal__icone">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15a2 2 0 0 1-2 2H8l-5 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+                  </span>
+                  <span>
+                    <strong>WhatsApp</strong>
+                    <span>(61) 99824-9527 — resposta rápida em horário comercial</span>
+                  </span>
+                </a>
+              </div>
+            </div>
+          </aside>
+        </div>
+      </div>
+    </section>
+
+    <section class="secao secao--gelo secao-cta">
+      <div class="container">
+        <div class="cta-final reveal">
+          <span class="eyebrow eyebrow--centro eyebrow--claro">Antes de enviar</span>
+          <h2>Quer entender como será o processo?</h2>
+          <p>As quatro etapas — conversa inicial, planejamento, design e desenvolvimento e publicação — estão explicadas passo a passo.</p>
+          <div class="btn-row">
+            <a class="btn btn--primary btn--lg" href="como-funciona.html">Ver como funciona</a>
+            <a class="btn btn--fantasma btn--lg" href="servicos.html">Ver serviços</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="rodape__grade">
+        <div class="rodape__marca">
+          <a class="brand" href="index.html">
+            <svg class="brand__mark" viewBox="0 0 48 48" aria-hidden="true" focusable="false">
+              <rect width="48" height="48" rx="14" fill="#149ED0"/>
+              <text x="24" y="26" text-anchor="middle" textLength="26" lengthAdjust="spacingAndGlyphs" font-family="Sora, 'Segoe UI', Arial, sans-serif" font-size="13" font-weight="700" fill="#FFFFFF">DDE</text>
+<rect x="14" y="29.5" width="20" height="3" rx="1.5" fill="#F5A623"/>
+            </svg>
+            <span class="brand__text">
+              <span class="brand__nome" style="color:#fff;">DDE <span style="color:#75C9E8;">Sites</span></span>
+              <span class="brand__tag">Sites para empresas</span>
+            </span>
+          </a>
+          <p>Criamos sites modernos, rápidos e pensados para apresentar seu negócio e conquistar novos clientes.</p>
+        </div>
+
+        <div>
+          <h2 class="rodape__titulo">Serviços</h2>
+          <ul class="rodape__links">
+            <li><a href="servicos.html#institucional">Sites institucionais</a></li>
+            <li><a href="servicos.html#lojas">Lojas virtuais</a></li>
+            <li><a href="servicos.html#landing">Landing pages</a></li>
+            <li><a href="servicos.html#redesign">Redesign de sites</a></li>
+            <li><a href="servicos.html#manutencao">Manutenção e melhorias</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h2 class="rodape__titulo">Empresa</h2>
+          <ul class="rodape__links">
+            <li><a href="projetos.html">Projetos</a></li>
+            <li><a href="como-funciona.html">Como funciona</a></li>
+            <li><a href="sobre.html">Sobre nós</a></li>
+            <li><a href="index.html#depoimentos">Depoimentos</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h2 class="rodape__titulo">Contato</h2>
+          <ul class="rodape__links">
+            <li><a href="orcamento.html">Solicitar orçamento</a></li>
+            <li><a href="https://wa.me/5561998249527">WhatsApp (61) 99824-9527</a></li>            <li><a href="mailto:contato@ddesites.com.br">contato@ddesites.com.br</a></li>
+            <li><a href="orcamento.html#canais">Outros canais</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="rodape__base">
+        <p>© <span data-ano>2026</span> DDE Sites. Todos os direitos reservados.</p>
+        <ul>
+          <li><a href="privacidade.html">Política de privacidade</a></li>
+          <li><a href="orcamento.html">Orçamento</a></li>
+        </ul>
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/js/main.js" defer></script>
+</body>
+</html>
