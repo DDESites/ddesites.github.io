@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Minha sacola — Bella Boutique</title>
+  <meta name="description" content="Revise sua sacola na Bella Boutique: quantidade, cupom, frete e total antes de finalizar.">
+  <meta name="theme-color" content="#b4645a">
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body data-pagina="sacola">
+
+  <a class="pular" href="#conteudo">Pular para o conteúdo</a>
+
+  <header class="cabecalho" id="cabecalho"></header>
+
+  <main id="conteudo">
+    <div class="cabecalho-pagina">
+      <div class="container">
+        <p class="caminho"><a href="index.html">Início</a> › Sacola</p>
+        <h1>Minha sacola</h1>
+        <p>Revise as peças, informe o CEP e escolha como prefere finalizar.</p>
+      </div>
+    </div>
+
+    <div class="container sacola-vazia" id="sacola-vazia" hidden>
+      <h2>Sua sacola está vazia</h2>
+      <p>Que tal dar uma olhada nas novidades da coleção?</p>
+      <p class="mt-2"><a class="btn btn-primario" href="catalogo.html">Ver coleção</a></p>
+    </div>
+
+    <div class="container sacola-layout" id="sacola-layout" hidden>
+      <div>
+        <div id="sacola-itens"></div>
+
+        <div style="margin-top:1.6rem">
+          <h2 style="font-size:1.2rem">Cupom de desconto</h2>
+          <div class="cupom-linha">
+            <label class="sr-only" for="campo-cupom">Código do cupom</label>
+            <input type="text" id="campo-cupom" placeholder="Ex.: BELLA10" autocomplete="off">
+            <button class="btn btn-contorno btn-mini" id="btn-cupom">Aplicar</button>
+          </div>
+          <p class="frete-resultado" id="cupom-aviso" role="status" aria-live="polite"></p>
+        </div>
+
+        <div>
+          <h2 style="font-size:1.2rem">Calcular frete e prazo</h2>
+          <div class="frete-linha">
+            <label class="sr-only" for="campo-cep">CEP de entrega</label>
+            <input type="text" id="campo-cep" inputmode="numeric" maxlength="9" placeholder="Digite seu CEP" autocomplete="postal-code">
+            <button class="btn btn-contorno btn-mini" id="btn-frete">Calcular</button>
+          </div>
+          <p class="frete-resultado" id="frete-resultado" role="status" aria-live="polite"></p>
+          <p class="frete-resultado">Não sabe o CEP? <a href="https://buscacep.correios.com.br/" target="_blank" rel="noopener">Consultar nos Correios</a> · <a href="entrega.html">Tabela de prazos</a></p>
+        </div>
+      </div>
+
+      <aside class="resumo-box" aria-label="Resumo do pedido">
+        <h2>Resumo</h2>
+        <div class="resumo-linha"><span>Subtotal</span><span id="resumo-subtotal"></span></div>
+        <div class="resumo-linha desconto" id="linha-desconto" hidden><span>Desconto do cupom</span><span id="resumo-desconto"></span></div>
+        <div class="resumo-linha"><span>Frete</span><span id="resumo-frete"></span></div>
+        <div class="resumo-linha total"><span>Total</span><span id="resumo-total"></span></div>
+        <p class="aviso-frete" id="aviso-frete"></p>
+        <a class="btn btn-primario btn-bloco" href="checkout.html">Finalizar compra</a>
+        <p class="frete-resultado centro" style="margin-top:0.8rem">Pagamento com Pix, cartão em até 5x sem juros ou boleto.</p>
+        <a class="btn btn-zap btn-bloco" id="btn-zap-pedido" href="#" target="_blank" rel="noopener" style="margin-top:0.6rem">Finalizar pelo WhatsApp</a>
+      </aside>
+    </div>
+  </main>
+
+  <footer class="rodape" id="rodape"></footer>
+
+  <script src="js/data.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/sacola.js"></script>
+</body>
+</html>

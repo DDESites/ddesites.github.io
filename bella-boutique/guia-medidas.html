@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Guia de medidas — Bella Boutique</title>
+  <meta name="description" content="Guia de medidas da Bella Boutique: tabela de tamanhos P, M, G e GG e dicas para medir o corpo corretamente.">
+  <meta name="theme-color" content="#b4645a">
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body data-pagina="guia">
+
+  <a class="pular" href="#conteudo">Pular para o conteúdo</a>
+
+  <header class="cabecalho" id="cabecalho"></header>
+
+  <main id="conteudo">
+    <div class="cabecalho-pagina">
+      <div class="container">
+        <p class="caminho"><a href="index.html">Início</a> › Guia de medidas</p>
+        <h1>Guia de medidas</h1>
+        <p>Meça o corpo (não a roupa) com a fita reta, sem apertar, e compare com a tabela.</p>
+      </div>
+    </div>
+
+    <div class="container pagina-conteudo">
+      <h2 style="margin-top:0">Tabela de tamanhos</h2>
+      <table class="tabela-medidas" style="margin:1.2rem 0">
+        <thead>
+          <tr><th>Tamanho</th><th>Busto (cm)</th><th>Cintura (cm)</th><th>Quadril (cm)</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>P</td><td>82 – 86</td><td>64 – 68</td><td>90 – 94</td></tr>
+          <tr><td>M</td><td>88 – 92</td><td>70 – 74</td><td>96 – 100</td></tr>
+          <tr><td>G</td><td>94 – 99</td><td>76 – 81</td><td>102 – 107</td></tr>
+          <tr><td>GG</td><td>101 – 106</td><td>83 – 88</td><td>109 – 114</td></tr>
+        </tbody>
+      </table>
+
+      <h2>Como medir corretamente</h2>
+      <ul>
+        <li><strong>Busto:</strong> rode a fita pela parte mais saliente da busta, mantendo a fita paralela ao chão.</li>
+        <li><strong>Cintura:</strong> meça na parte mais fina da cintura, geralmente acima do umbigo, sem prender a respiração.</li>
+        <li><strong>Quadril:</strong> meça na parte mais larga do quadril, com os pés juntos.</li>
+      </ul>
+
+      <h2>Dicas por tipo de peça</h2>
+      <ul>
+        <li>Peças de alfaiataria e crepe seguem a tabela à risca.</li>
+        <li>Tricôs e modelos de corte solto permitem certa folga — se estiver entre dois tamanhos, escolha o menor.</li>
+        <li>Vestidos de festa com costas abertas ficam melhor no tamanho que segue a medida de busto.</li>
+        <li>Calças numeradas (36 a 44) seguem o padrão brasileiro de cintura.</li>
+      </ul>
+
+      <h2>Na dúvida?</h2>
+      <p>Chame no WhatsApp, informe suas medidas e a peça que você curtiu — nossa equipe indica o tamanho certo para você.</p>
+      <p><a class="btn btn-zap btn-mini" id="guia-zap" href="#" target="_blank" rel="noopener">Pedir ajuda no WhatsApp</a> <a class="btn btn-contorno btn-mini" href="trocas.html">Política de trocas</a></p>
+    </div>
+  </main>
+
+  <footer class="rodape" id="rodape"></footer>
+
+  <script src="js/data.js"></script>
+  <script src="js/main.js"></script>
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      document.getElementById("guia-zap").href = linkWhatsApp("Olá! Preciso de ajuda para escolher o tamanho na Bella Boutique. Minhas medidas são: ");
+    });
+  </script>
+</body>
+</html>

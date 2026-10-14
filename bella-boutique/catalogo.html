@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Catálogo — Bella Boutique | Moda Feminina</title>
+  <meta name="description" content="Catálogo completo da Bella Boutique: vestidos, conjuntos, blusas, calças e acessórios. Filtre por tamanho, cor e preço.">
+  <meta name="theme-color" content="#b4645a">
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body data-pagina="catalogo">
+
+  <a class="pular" href="#conteudo">Pular para o conteúdo</a>
+
+  <header class="cabecalho" id="cabecalho"></header>
+
+  <main id="conteudo">
+    <div class="cabecalho-pagina">
+      <div class="container">
+        <p class="caminho"><a href="index.html">Início</a> › Catálogo</p>
+        <h1 id="catalogo-titulo">Catálogo Bella</h1>
+        <p id="catalogo-subtitulo">Todas as peças da curadoria Bella, com envio para todo o Brasil.</p>
+      </div>
+    </div>
+
+    <div class="container catalogo-layout">
+      <!-- Filtros -->
+      <aside class="filtros" id="filtros" aria-label="Filtros de produtos">
+        <div class="filtros-cabecalho">
+          <h2>Filtros</h2>
+          <button class="btn btn-contorno btn-mini" id="limpar-filtros">Limpar</button>
+        </div>
+        <div id="filtros-corpo"></div>
+      </aside>
+
+      <div>
+        <div class="catalogo-barra">
+          <button class="btn btn-contorno btn-mini" id="abrir-filtros">Filtros</button>
+          <p class="catalogo-contagem" id="catalogo-contagem" role="status" aria-live="polite"></p>
+          <label class="sr-only" for="ordenar">Ordenar produtos por</label>
+          <select class="ordenar" id="ordenar">
+            <option value="novidades">Novidades</option>
+            <option value="destaque">Relevância</option>
+            <option value="menor-preco">Menor preço</option>
+            <option value="maior-preco">Maior preço</option>
+            <option value="promocao">Promoções</option>
+          </select>
+        </div>
+
+        <div class="chips" id="chips-ativos"></div>
+
+        <div class="grade-produtos" id="grade-catalogo"></div>
+
+        <div class="catalogo-vazio" id="catalogo-vazio" hidden>
+          <h2>Nenhuma peça encontrada</h2>
+          <p>Tente remover alguns filtros ou buscar por outro termo.</p>
+          <button class="btn btn-primario" id="vazio-limpar">Limpar filtros</button>
+        </div>
+
+        <div class="carregar-mais-caixa" id="carregar-mais-caixa" hidden>
+          <button class="btn btn-contorno" id="carregar-mais">Carregar mais peças</button>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer class="rodape" id="rodape"></footer>
+
+  <script src="js/data.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/catalogo.js"></script>
+</body>
+</html>

@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Sobre a Bella Boutique — Moda Feminina</title>
+  <meta name="description" content="Conheça a história da Bella Boutique: moda feminina com curadoria, atendimento próximo e envio para todo o Brasil.">
+  <meta name="theme-color" content="#b4645a">
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body data-pagina="sobre">
+
+  <a class="pular" href="#conteudo">Pular para o conteúdo</a>
+
+  <header class="cabecalho" id="cabecalho"></header>
+
+  <main id="conteudo">
+    <div class="cabecalho-pagina">
+      <div class="container">
+        <p class="caminho"><a href="index.html">Início</a> › Sobre</p>
+        <h1>Sobre a Bella Boutique</h1>
+        <p>Moda feminina com elegância, cuidado e atendimento de verdade.</p>
+      </div>
+    </div>
+
+    <div class="container editorial" style="padding:3rem 0">
+      <div class="editorial-foto">
+        <img src="https://images.unsplash.com/photo-1539109136881-3be0616acf4b?auto=format&fit=crop&w=1000&q=80" alt="Interior da Bella Boutique com araras de roupas" loading="lazy" onerror="bellaImgFalha(this)">
+      </div>
+      <div>
+        <span class="eyebrow">Nossa história</span>
+        <p class="script" style="color:var(--dourado)">Prazer, somos a Bella</p>
+        <h2>Peças que valorizam cada mulher</h2>
+        <p>A Bella Boutique nasceu do amor por moda que acolhe. Acreditamos que roupa boa é a que faz você se sentir linda em cada detalhe — com caimento impecável, tecidos que respeitam o corpo e um atendimento que conhece você pelo nome.</p>
+        <p>Já somos mais de <strong id="sobre-seguidores"></strong> seguidores no Instagram, onde mostramos os lançamentos e os looks em primeira mão. Cada peça entra na loja depois de passar pelo nosso crivo: modelagem que valoriza, conforto no dia a dia e preço que faz sentido. Do casual ao especial, o guarda-roupa da Bella é feito para atravessar estações.</p>
+        <p class="editorial-destaque">“Elegância não é excesso: é a peça certa, no momento certo, em você.”</p>
+        <p>Venha na loja física em nosso município, receba em casa em qualquer canto do Brasil ou chame no WhatsApp que a gente monta o look com você.</p>
+        <a class="btn btn-primario" id="sobre-insta" href="#" target="_blank" rel="noopener">Ver no Instagram</a>
+      </div>
+    </div>
+
+    <section class="secao secao-alternada" aria-labelledby="titulo-valores">
+      <div class="container">
+        <div class="secao-titulo">
+          <span class="eyebrow">O que nos move</span>
+          <h2 id="titulo-valores">Nossos compromissos</h2>
+        </div>
+        <div class="cartoes-info">
+          <div class="cartao-info">
+            <h3>Curadoria de verdade</h3>
+            <p>Selecionamos peça a peça, testando modelagem e tecido antes de chegar até você.</p>
+          </div>
+          <div class="cartao-info">
+            <h3>Atendimento próximo</h3>
+            <p>Falamos com você no WhatsApp, sem robô — para escolher tamanho, cor e look.</p>
+          </div>
+          <div class="cartao-info">
+            <h3>Compra sem risco</h3>
+            <p>Troca fácil em até 7 dias e todas as condições explicadas sem letras miúdas.</p>
+          </div>
+          <div class="cartao-info">
+            <h3>Envio para o Brasil todo</h3>
+            <p>Postamos com código de rastreio e frete grátis acima de R$ 349.</p>
+          </div>
+        </div>
+        <p class="centro"><a class="btn btn-primario" href="catalogo.html">Ver a coleção</a> <a class="btn btn-contorno" href="contato.html">Fale com a gente</a></p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="rodape" id="rodape"></footer>
+
+  <script src="js/data.js"></script>
+  <script src="js/main.js"></script>
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      document.getElementById("sobre-seguidores").textContent = LOJA.seguidores;
+      const btn = document.getElementById("sobre-insta");
+      btn.href = LOJA.instagram;
+      btn.textContent = `Ver ${LOJA.instagramHandle} no Instagram`;
+    });
+  </script>
+</body>
+</html>

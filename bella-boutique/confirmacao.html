@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Pedido enviado — Bella Boutique</title>
+  <meta name="description" content="Pedido recebido pela Bella Boutique. Nossa equipe confirma pagamento e entrega pelo WhatsApp.">
+  <meta name="theme-color" content="#b4645a">
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body data-pagina="confirmacao">
+
+  <a class="pular" href="#conteudo">Pular para o conteúdo</a>
+
+  <header class="cabecalho" id="cabecalho"></header>
+
+  <main id="conteudo">
+    <div class="container confirmacao" id="confirmacao-caixa">
+      <div class="icone-ok" aria-hidden="true">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m5 13 4 4L19 7"/></svg>
+      </div>
+      <h1>Pedido enviado com sucesso!</h1>
+      <p id="confirmacao-saudacao">Obrigada pela confiança na Bella Boutique.</p>
+      <p class="pedido-codigo" id="confirmacao-codigo"></p>
+      <p>Nossa equipe vai confirmar o pagamento, o prazo de entrega e o endereço pelo WhatsApp em breve. Fique de olho na mensagem — é rapidinho.</p>
+      <div id="confirmacao-detalhes" style="text-align:left;background:var(--creme);border:1px solid var(--borda);border-radius:10px;padding:1.4rem;margin-top:1.6rem"></div>
+      <div class="confirmacao-acoes">
+        <a class="btn btn-zap" id="confirmacao-zap" href="#" target="_blank" rel="noopener">Confirmar pelo WhatsApp</a>
+        <a class="btn btn-primario" href="catalogo.html">Continuar comprando</a>
+        <a class="btn btn-contorno" href="index.html">Voltar ao início</a>
+      </div>
+    </div>
+  </main>
+
+  <footer class="rodape" id="rodape"></footer>
+
+  <script src="js/data.js"></script>
+  <script src="js/main.js"></script>
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const codigo = new URLSearchParams(location.search).get("pedido") || localStorage.getItem("bb_ultimo_pedido");
+      const pedidos = JSON.parse(localStorage.getItem("bb_pedidos") || "[]");
+      const pedido = pedidos.find((p) => p.codigo === codigo) || pedidos[pedidos.length - 1];
+
+      if (!pedido) {
+        document.getElementById("confirmacao-caixa").innerHTML = `
+          <h1>Nenhum pedido encontrado</h1>
+          <p>Se você acabou de finalizar, o pedido foi registrado com sucesso — nossa equipe entrará em contato pelo WhatsApp.</p>
+          <div class="confirmacao-acoes">
+            <a class="btn btn-primario" href="catalogo.html">Ver coleção</a>
+            <a class="btn btn-contorno" href="index.html">Voltar ao início</a>
+          </div>`;
+        return;
+      }
+
+      document.title = `Pedido ${pedido.codigo} enviado — Bella Boutique`;
+      document.getElementById("confirmacao-codigo").textContent = `Pedido ${pedido.codigo}`;
+      document.getElementById("confirmacao-saudacao").textContent =
+        `${pedido.nome.split(" ")[0]}, recebemos o seu pedido!`;
+
+      const { subtotal, desconto, frete, total, freteRotulo } = pedido.valores || { subtotal: 0, desconto: 0, frete: 0, total: 0, freteRotulo: "—" };
+      const linhasItens = pedido.itens.map((i) => {
+        const p = acharProduto(i.id);
+        return `<div class="resumo-item">
+          <img src="${p ? p.imagens[0] : "assets/placeholder.svg"}" alt="" onerror="bellaImgFalha(this)">
+          <div><strong>${esc(p ? p.nome : i.id)}</strong><small>Tam ${esc(i.tamanho)} · ${esc(i.cor)} · ${i.qtd}x</small></div>
+          <span style="font-weight:600;font-size:0.92rem">${formatarPreco(i.preco * i.qtd)}</span>
+        </div>`;
+      }).join("");
+
+      document.getElementById("confirmacao-detalhes").innerHTML = `
+        <h2 style="font-size:1.15rem;margin-bottom:0.8rem">Resumo do pedido</h2>
+        ${linhasItens}
+        <div class="resumo-linha"><span>Subtotal</span><span>${formatarPreco(subtotal)}</span></div>
+        ${desconto > 0 ? `<div class="resumo-linha desconto"><span>Desconto${pedido.cupom ? ` (${esc(pedido.cupom)})` : ""}</span><span>-${formatarPreco(desconto)}</span></div>` : ""}
+        <div class="resumo-linha"><span>Frete</span><span>${esc(freteRotulo)}</span></div>
+        <div class="resumo-linha total"><span>Total</span><span>${formatarPreco(total)}</span></div>
+        <p style="margin:0.8rem 0 0;font-size:0.88rem;color:var(--texto-suave)">
+          Entrega: ${esc(pedido.entrega)}${pedido.entrega === "Entrega em casa" && pedido.cep ? ` — CEP ${esc(pedido.cep)}, ${esc(pedido.cidade || "")}` : ""}.<br>
+          Pagamento: ${esc(pedido.pagamento)}. Registrado em ${esc(pedido.data)}.
+        </p>`;
+
+      document.getElementById("confirmacao-zap").href = linkWhatsApp(
+        textoPedidoWhatsApp(pedido.itens, `Pedido ${pedido.codigo} — cliente: ${pedido.nome} (${pedido.whatsapp})`)
+      );
+    });
+  </script>
+</body>
+</html>

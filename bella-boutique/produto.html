@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Produto — Bella Boutique | Moda Feminina</title>
+  <meta name="description" content="Detalhes da peça na Bella Boutique: fotos, tamanhos, cores, preço e prazo de entrega.">
+  <meta name="theme-color" content="#b4645a">
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body data-pagina="produto">
+
+  <a class="pular" href="#conteudo">Pular para o conteúdo</a>
+
+  <header class="cabecalho" id="cabecalho"></header>
+
+  <main id="conteudo">
+    <div class="container" style="padding-top:1.4rem">
+      <p class="caminho" id="caminho"></p>
+    </div>
+
+    <div class="container" id="produto-nao-encontrado" hidden>
+      <div class="catalogo-vazio">
+        <h2>Peça não encontrada</h2>
+        <p>Ela pode ter saído de linha. Veja o catálogo completo para encontrar algo para você.</p>
+        <a class="btn btn-primario" href="catalogo.html">Ir para o catálogo</a>
+      </div>
+    </div>
+
+    <div class="container produto-layout" id="produto-detalhe">
+      <!-- Galeria -->
+      <div>
+        <button type="button" class="galeria-principal" id="foto-principal-caixa" aria-label="Ampliar foto da peça">
+          <img id="foto-principal" src="" alt="">
+        </button>
+        <div class="galeria-miniaturas" id="galeria-miniaturas"></div>
+      </div>
+
+      <!-- Compra -->
+      <div class="produto-compra">
+        <span class="produto-categoria" id="produto-categoria"></span>
+        <h1 id="produto-nome"></h1>
+        <p class="produto-resumo" id="produto-resumo"></p>
+
+        <div class="bloco-preco">
+          <div class="preco-linha">
+            <span class="preco" id="produto-preco"></span>
+            <span class="preco-antigo" id="produto-preco-antigo" hidden></span>
+            <span class="desconto-chip" id="produto-desconto" hidden></span>
+          </div>
+          <p class="parcelas" id="produto-parcelas"></p>
+          <p class="disponibilidade" id="produto-disponibilidade"></p>
+        </div>
+
+        <div class="campo-grupo">
+          <strong>Cor</strong>
+          <div class="tamanhos-grade" id="botoes-cor"></div>
+          <p class="campo-legenda">Cor escolhida: <span id="legenda-cor">—</span></p>
+        </div>
+
+        <div class="campo-grupo">
+          <strong>Tamanho <button type="button" class="btn btn-contorno btn-mini" id="abrir-guia" style="vertical-align:middle">Guia de medidas</button></strong>
+          <div class="tamanhos-grade" id="botoes-tamanho"></div>
+          <p class="campo-legenda">Tamanho escolhido: <span id="legenda-tamanho">—</span></p>
+        </div>
+
+        <p class="aviso-erro" id="aviso-erro" role="alert"></p>
+
+        <div class="acoes-produto">
+          <button class="btn btn-primario" id="btn-adicionar">Adicionar à sacola</button>
+          <a class="btn btn-zap" id="btn-zap" href="#" target="_blank" rel="noopener">Tirar dúvida no WhatsApp</a>
+        </div>
+
+        <div class="info-entrega">
+          <strong>Entrega e benefícios</strong>
+          <ul>
+            <li>Enviamos para todo o Brasil com código de rastreio.</li>
+            <li>Frete grátis em compras acima de <span id="frete-gratis-info"></span>.</li>
+            <li>5% de desconto pagando por Pix.</li>
+            <li>Trocas em até 7 dias após o recebimento — veja a <a href="trocas.html">política de trocas</a>.</li>
+          </ul>
+        </div>
+
+        <div class="produto-info" id="produto-info"></div>
+      </div>
+    </div>
+
+    <!-- Relacionados -->
+    <section class="secao secao-alternada" id="secao-relacionados" aria-labelledby="titulo-relacionados">
+      <div class="container">
+        <div class="secao-titulo">
+          <span class="eyebrow">Combina com</span>
+          <h2 id="titulo-relacionados">Você também pode gostar</h2>
+        </div>
+        <div class="grade-produtos" id="grade-relacionados"></div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Modal do guia de medidas -->
+  <div class="modal-guia" id="modal-guia" role="dialog" aria-modal="true" aria-labelledby="guia-titulo">
+    <div class="modal-caixa">
+      <div class="cabecalho-modal">
+        <h2 id="guia-titulo" style="margin:0;font-size:1.3rem">Guia de medidas</h2>
+        <button class="icone-btn" data-fechar-modal aria-label="Fechar guia de medidas">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="m6 6 12 12M18 6 6 18"/></svg>
+        </button>
+      </div>
+      <p style="color:var(--texto-suave);font-size:0.92rem">Meça o corpo (não a roupa) e compare com a tabela. Em caso de dúvida, chame no WhatsApp que a gente ajuda.</p>
+      <table class="tabela-medidas">
+        <thead>
+          <tr><th>Tamanho</th><th>Busto (cm)</th><th>Cintura (cm)</th><th>Quadril (cm)</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>P</td><td>82 – 86</td><td>64 – 68</td><td>90 – 94</td></tr>
+          <tr><td>M</td><td>88 – 92</td><td>70 – 74</td><td>96 – 100</td></tr>
+          <tr><td>G</td><td>94 – 99</td><td>76 – 81</td><td>102 – 107</td></tr>
+          <tr><td>GG</td><td>101 – 106</td><td>83 – 88</td><td>109 – 114</td></tr>
+        </tbody>
+      </table>
+      <p style="margin-top:1rem"><a class="btn btn-contorno btn-mini" href="guia-medidas.html">Ver guia completo</a></p>
+    </div>
+  </div>
+
+  <footer class="rodape" id="rodape"></footer>
+
+  <script src="js/data.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/produto.js"></script>
+</body>
+</html>

@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Contato e atendimento — Bella Boutique</title>
+  <meta name="description" content="Fale com a Bella Boutique: WhatsApp, e-mail, horários de atendimento e formulário de contato.">
+  <meta name="theme-color" content="#b4645a">
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body data-pagina="contato">
+
+  <a class="pular" href="#conteudo">Pular para o conteúdo</a>
+
+  <header class="cabecalho" id="cabecalho"></header>
+
+  <main id="conteudo">
+    <div class="cabecalho-pagina">
+      <div class="container">
+        <p class="caminho"><a href="index.html">Início</a> › Contato</p>
+        <h1>Contato e atendimento</h1>
+        <p>Tire dúvidas de tamanho, entrega, trocas ou peça ajuda para montar um look. A gente responde com carinho.</p>
+      </div>
+    </div>
+
+    <div class="container contato-grade">
+      <div>
+        <h2 style="margin-top:0">Fale com a gente</h2>
+        <div class="cartoes-info" style="grid-template-columns:1fr">
+          <div class="cartao-info">
+            <h3>WhatsApp</h3>
+            <p id="contato-zap-texto"></p>
+            <p style="margin-top:0.6rem"><a class="btn btn-zap btn-mini" id="contato-zap" href="#" target="_blank" rel="noopener">Chamar no WhatsApp</a></p>
+          </div>
+          <div class="cartao-info">
+            <h3>E-mail</h3>
+            <p id="contato-email"></p>
+          </div>
+          <div class="cartao-info">
+            <h3>Atendimento e loja</h3>
+            <p id="contato-loja"></p>
+          </div>
+        </div>
+      </div>
+
+      <div>
+        <h2 style="margin-top:0">Envie uma mensagem</h2>
+        <p style="color:var(--texto-suave)">Preencha os campos e nós abrimos o WhatsApp com sua mensagem pronta.</p>
+        <form id="form-contato" novalidate>
+          <div class="form-grade">
+            <div class="linha-campo inteiro">
+              <label for="contato-nome">Seu nome</label>
+              <input type="text" id="contato-nome" required autocomplete="name">
+            </div>
+            <div class="linha-campo inteiro">
+              <label for="contato-assunto">Assunto</label>
+              <select id="contato-assunto">
+                <option>Dúvida sobre tamanho</option>
+                <option>Entrega e prazo</option>
+                <option>Troca ou devolução</option>
+                <option>Disponibilidade de peça</option>
+                <option>Outro assunto</option>
+              </select>
+            </div>
+            <div class="linha-campo inteiro">
+              <label for="contato-mensagem">Mensagem</label>
+              <textarea id="contato-mensagem" rows="4" required placeholder="Escreva sua mensagem…"></textarea>
+            </div>
+          </div>
+          <p class="aviso-erro" id="contato-erro" role="alert"></p>
+          <button type="submit" class="btn btn-primario" style="margin-top:1rem">Enviar pelo WhatsApp</button>
+        </form>
+      </div>
+    </div>
+  </main>
+
+  <footer class="rodape" id="rodape"></footer>
+
+  <script src="js/data.js"></script>
+  <script src="js/main.js"></script>
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      document.getElementById("contato-zap-texto").textContent = `${LOJA.whatsappExibicao} — ${LOJA.horario}`;
+      document.getElementById("contato-zap").href = linkWhatsApp(TEXTO_PADRAO_ZAP);
+      document.getElementById("contato-email").innerHTML = `<a href="mailto:${LOJA.email}">${LOJA.email}</a>`;
+      document.getElementById("contato-loja").textContent = `${LOJA.endereco}. Atendimento: ${LOJA.horario}.`;
+
+      document.getElementById("form-contato").addEventListener("submit", (e) => {
+        e.preventDefault();
+        const nome = document.getElementById("contato-nome");
+        const mensagem = document.getElementById("contato-mensagem");
+        const erro = document.getElementById("contato-erro");
+        if (nome.value.trim().length < 2 || mensagem.value.trim().length < 5) {
+          erro.textContent = "Preencha seu nome e a mensagem para continuar.";
+          erro.classList.add("visivel");
+          return;
+        }
+        erro.classList.remove("visivel");
+        const texto = `Olá! Vim pelo site da Bella Boutique.\nNome: ${nome.value.trim()}\nAssunto: ${document.getElementById("contato-assunto").value}\nMensagem: ${mensagem.value.trim()}`;
+        window.open(linkWhatsApp(texto), "_blank", "noopener");
+      });
+    });
+  </script>
+</body>
+</html>

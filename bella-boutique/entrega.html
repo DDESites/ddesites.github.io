@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Entrega e frete — Bella Boutique</title>
+  <meta name="description" content="Prazos, regiões e valores de entrega da Bella Boutique. Frete grátis acima de R$ 349 e rastreio em todos os pedidos.">
+  <meta name="theme-color" content="#b4645a">
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body data-pagina="entrega">
+
+  <a class="pular" href="#conteudo">Pular para o conteúdo</a>
+
+  <header class="cabecalho" id="cabecalho"></header>
+
+  <main id="conteudo">
+    <div class="cabecalho-pagina">
+      <div class="container">
+        <p class="caminho"><a href="index.html">Início</a> › Entrega e frete</p>
+        <h1>Entrega e frete</h1>
+        <p>Enviamos para todo o Brasil com código de rastreio. Veja prazos e valores por região.</p>
+      </div>
+    </div>
+
+    <div class="container pagina-conteudo">
+      <h2 style="margin-top:0">Tabela de prazos e valores</h2>
+      <p>Os prazos são contados a partir da confirmação do pagamento e variam conforme o CEP de destino:</p>
+      <table class="tabela-medidas" style="margin:1.2rem 0">
+        <thead>
+          <tr><th>Região</th><th>Valor estimado</th><th>Prazo estimado</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>Sudeste (CEPs 01–49)</td><td>R$ 19,90</td><td>2 a 4 dias úteis</td></tr>
+          <tr><td>Sul e Centro-Oeste (CEPs 50–69)</td><td>R$ 22,90</td><td>3 a 5 dias úteis</td></tr>
+          <tr><td>Norte e Nordeste (CEPs 70–99)</td><td>R$ 27,90</td><td>5 a 9 dias úteis</td></tr>
+        </tbody>
+      </table>
+      <p><small style="color:var(--texto-suave)">Os valores acima são estimativas de referência. O valor exato é confirmado no cálculo de frete da sacola e no pedido pelo WhatsApp.</small></p>
+
+      <h2>Frete grátis</h2>
+      <p>Pedidos acima de <strong id="frete-gratis-valor"></strong> têm frete grátis para todo o Brasil. O benefício aparece automaticamente no resumo da sacola.</p>
+
+      <h2>Retirada na loja</h2>
+      <p>Você pode retirar seu pedido em nossa loja, sem custo. Avisamos pelo WhatsApp assim que a peça estiver separada e pronta.</p>
+
+      <h2>Rastreio</h2>
+      <p>Todo pedido sai com código de rastreio, enviado pelo WhatsApp após a postagem. Você acompanha o envio direto no site dos Correios ou da transportadora.</p>
+
+      <h2>Pagamentos</h2>
+      <ul>
+        <li><strong>Pix:</strong> 5% de desconto — o QR Code é enviado pelo WhatsApp.</li>
+        <li><strong>Cartão de crédito:</strong> em até 5x sem juros.</li>
+        <li><strong>Boleto bancário:</strong> vencimento em 2 dias úteis.</li>
+      </ul>
+
+      <h2>Dúvidas sobre entrega?</h2>
+      <p>Chame no WhatsApp informando seu CEP que a gente confirma o prazo na hora.</p>
+      <p><a class="btn btn-zap btn-mini" id="entrega-zap" href="#" target="_blank" rel="noopener">Falar no WhatsApp</a> <a class="btn btn-contorno btn-mini" href="trocas.html">Política de trocas</a></p>
+    </div>
+  </main>
+
+  <footer class="rodape" id="rodape"></footer>
+
+  <script src="js/data.js"></script>
+  <script src="js/main.js"></script>
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      document.getElementById("frete-gratis-valor").textContent = formatarPreco(LOJA.freteGratisAcima);
+      document.getElementById("entrega-zap").href = linkWhatsApp("Olá! Tenho uma dúvida sobre entrega e prazo na Bella Boutique. Meu CEP é: ");
+    });
+  </script>
+</body>
+</html>

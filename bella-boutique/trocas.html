@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Trocas e devoluções — Bella Boutique</title>
+  <meta name="description" content="Política de trocas e devoluções da Bella Boutique: 7 dias após o recebimento, passo a passo simples.">
+  <meta name="theme-color" content="#b4645a">
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body data-pagina="trocas">
+
+  <a class="pular" href="#conteudo">Pular para o conteúdo</a>
+
+  <header class="cabecalho" id="cabecalho"></header>
+
+  <main id="conteudo">
+    <div class="cabecalho-pagina">
+      <div class="container">
+        <p class="caminho"><a href="index.html">Início</a> › Trocas e devoluções</p>
+        <h1>Trocas e devoluções</h1>
+        <p>Comprou, provou e não serviu? A gente resolve sem complicação.</p>
+      </div>
+    </div>
+
+    <div class="container pagina-conteudo">
+      <h2 style="margin-top:0">Prazo para trocar</h2>
+      <p>Você tem até <strong>7 dias corridos</strong> após o recebimento para solicitar troca ou devolução — direito garantido pelo Código de Defesa do Consumidor (art. 49).</p>
+
+      <h2>Como funciona o passo a passo</h2>
+      <ol>
+        <li>Fale com a gente no WhatsApp informando o número do pedido e o motivo da troca.</li>
+        <li>Nós orientamos o envio da peça e a gente reserva o novo tamanho ou cor imediatamente.</li>
+        <li>Ao recebermos a peça de volta, damos início à troca ou ao reembolso.</li>
+      </ol>
+
+      <h2>Condições para a troca</h2>
+      <ul>
+        <li>A peça deve estar sem uso, sem lavagem, com etiquetas e na embalagem original.</li>
+        <li>Não podem ser trocadas peças de íntimo ou acessórios já utilizados, por higiene.</li>
+        <li>Peças com defeito de fabricação são trocadas a qualquer momento dentro da garantia.</li>
+      </ul>
+
+      <h2>Quem paga o frete?</h2>
+      <ul>
+        <li><strong>Arrependimento (desistência):</strong> o custo do envio de volta é de nossa responsabilidade, conforme o CDC.</li>
+        <li><strong>Troca por tamanho ou cor:</strong> o reenvio da nova peça segue a tabela de frete normal da loja.</li>
+      </ul>
+
+      <h2>Reembolso</h2>
+      <p>O reembolso é feito pelo mesmo meio de pagamento, em até 10 dias úteis após a confirmação da devolução. No Pix, devolvemos para a chave informada no pedido.</p>
+
+      <h2>Peça com defeito ou errada</h2>
+      <p>Recebeu uma peça diferente do pedido ou com defeito? Envie fotos pelo WhatsApp que resolvemos com prioridade, sem custo nenhum.</p>
+
+      <p><a class="btn btn-zap btn-mini" id="trocas-zap" href="#" target="_blank" rel="noopener">Solicitar troca no WhatsApp</a> <a class="btn btn-contorno btn-mini" href="guia-medidas.html">Ver guia de medidas</a></p>
+    </div>
+  </main>
+
+  <footer class="rodape" id="rodape"></footer>
+
+  <script src="js/data.js"></script>
+  <script src="js/main.js"></script>
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      document.getElementById("trocas-zap").href = linkWhatsApp("Olá! Preciso solicitar uma troca na Bella Boutique. Meu pedido é: ");
+    });
+  </script>
+</body>
+</html>

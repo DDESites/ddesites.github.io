@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Finalizar compra — Bella Boutique</title>
+  <meta name="description" content="Finalize sua compra na Bella Boutique em poucas etapas: dados, entrega e confirmação do pedido.">
+  <meta name="theme-color" content="#b4645a">
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body data-pagina="checkout">
+
+  <a class="pular" href="#conteudo">Pular para o conteúdo</a>
+
+  <header class="cabecalho" id="cabecalho"></header>
+
+  <main id="conteudo">
+    <div class="cabecalho-pagina">
+      <div class="container">
+        <p class="caminho"><a href="index.html">Início</a> › <a href="sacola.html">Sacola</a> › Finalizar compra</p>
+        <h1>Finalizar compra</h1>
+        <p>São poucas etapas — e você pode revisar tudo antes de confirmar.</p>
+      </div>
+    </div>
+
+    <div class="container sacola-vazia" id="checkout-vazio" hidden>
+      <h2>Não há itens para finalizar</h2>
+      <p>Adicione peças à sacola para continuar.</p>
+      <p class="mt-2"><a class="btn btn-primario" href="catalogo.html">Ver coleção</a></p>
+    </div>
+
+    <div class="container checkout-layout" id="checkout-layout" hidden>
+      <form id="form-checkout" novalidate>
+        <div class="etapas" aria-label="Etapas do checkout">
+          <span class="passo ativo" data-passo="1"><b>1</b> Seus dados</span>
+          <span class="passo" data-passo="2"><b>2</b> Entrega e pagamento</span>
+          <span class="passo" data-passo="3"><b>3</b> Revisão e envio</span>
+        </div>
+
+        <!-- Passo 1 -->
+        <section class="checkout-etapa ativa" data-etapa="1">
+          <h2>Seus dados</h2>
+          <div class="form-grade">
+            <div class="linha-campo inteiro">
+              <label for="nome">Nome completo</label>
+              <input type="text" id="nome" name="nome" autocomplete="name" required>
+            </div>
+            <div class="linha-campo">
+              <label for="whatsapp">WhatsApp</label>
+              <input type="tel" id="whatsapp" name="whatsapp" autocomplete="tel" placeholder="(61) 90000-0000" required>
+            </div>
+            <div class="linha-campo">
+              <label for="email">E-mail (opcional)</label>
+              <input type="email" id="email" name="email" autocomplete="email">
+              <small>Usamos só para enviar a confirmação do pedido.</small>
+            </div>
+          </div>
+          <div class="checkout-acoes">
+            <button type="button" class="btn btn-primario" data-proximo="2">Continuar</button>
+          </div>
+        </section>
+
+        <!-- Passo 2 -->
+        <section class="checkout-etapa" data-etapa="2">
+          <h2>Entrega e pagamento</h2>
+
+          <label class="opcao-caixa">
+            <input type="radio" name="entrega" value="Entrega em casa" checked>
+            <span><strong>Entrega em casa</strong><small>Enviamos para todo o Brasil com rastreio. Prazo calculado pelo CEP.</small></span>
+          </label>
+          <label class="opcao-caixa">
+            <input type="radio" name="entrega" value="Retirada na loja">
+            <span><strong>Retirar na loja</strong><small><span id="loja-cidade"></span> — sem custo. Avisamos quando estiver pronto.</small></span>
+          </label>
+
+          <div class="form-grade" id="campos-endereco" style="margin-top:1rem">
+            <div class="linha-campo">
+              <label for="cep">CEP</label>
+              <input type="text" id="cep" name="cep" inputmode="numeric" maxlength="9" autocomplete="postal-code" required>
+            </div>
+            <div class="linha-campo">
+              <label for="cidade">Cidade</label>
+              <input type="text" id="cidade" name="cidade" autocomplete="address-level2" required>
+            </div>
+            <div class="linha-campo inteiro">
+              <label for="endereco">Endereço completo (rua, número e complemento)</label>
+              <input type="text" id="endereco" name="endereco" autocomplete="street-address" required>
+            </div>
+          </div>
+
+          <h2 style="margin-top:2rem">Forma de pagamento</h2>
+          <label class="opcao-caixa">
+            <input type="radio" name="pagamento" value="Pix" checked>
+            <span><strong>Pix</strong><small><span id="pix-desconto"></span> de desconto — enviamos o QR Code pelo WhatsApp.</small></span>
+          </label>
+          <label class="opcao-caixa">
+            <input type="radio" name="pagamento" value="Cartão de crédito">
+            <span><strong>Cartão de crédito</strong><small>Em até 5x sem juros.</small></span>
+          </label>
+          <label class="opcao-caixa">
+            <input type="radio" name="pagamento" value="Boleto">
+            <span><strong>Boleto bancário</strong><small>Vencimento em 2 dias úteis.</small></span>
+          </label>
+
+          <div class="linha-campo" style="margin-top:1rem">
+            <label for="observacao">Observação (opcional)</label>
+            <textarea id="observacao" name="observacao" rows="2" placeholder="Ex.: presente, horário de entrega, referência…"></textarea>
+          </div>
+
+          <div class="checkout-acoes">
+            <button type="button" class="btn btn-contorno" data-proximo="1">Voltar</button>
+            <button type="button" class="btn btn-primario" data-proximo="3">Revisar pedido</button>
+          </div>
+        </section>
+
+        <!-- Passo 3 -->
+        <section class="checkout-etapa" data-etapa="3">
+          <h2>Revisão e envio</h2>
+          <p id="revisao-texto" style="color:var(--texto-suave)"></p>
+          <p style="color:var(--texto-suave)">Ao confirmar, seu pedido é enviado para a nossa equipe pelo WhatsApp — e nós concluímos o pagamento e a entrega com você.</p>
+          <div class="checkout-acoes">
+            <button type="button" class="btn btn-contorno" data-proximo="2">Voltar e editar</button>
+            <button type="submit" class="btn btn-primario">Confirmar pedido</button>
+            <a class="btn btn-zap" id="btn-zap-finalizar" href="#" target="_blank" rel="noopener">Enviar pelo WhatsApp</a>
+          </div>
+        </section>
+      </form>
+
+      <aside class="resumo-box" aria-label="Resumo do pedido">
+        <h2>Seu pedido</h2>
+        <div id="resumo-itens"></div>
+        <div class="resumo-linha"><span>Subtotal</span><span id="checkout-subtotal"></span></div>
+        <div class="resumo-linha desconto" id="linha-desconto" hidden><span>Desconto do cupom</span><span id="checkout-desconto"></span></div>
+        <div class="resumo-linha"><span>Frete</span><span id="checkout-frete"></span></div>
+        <div class="resumo-linha total"><span>Total</span><span id="checkout-total"></span></div>
+        <p class="aviso-frete" id="checkout-aviso-frete"></p>
+        <p class="frete-resultado">Precisa de ajuda? <a href="sacola.html">Voltar para a sacola</a>.</p>
+      </aside>
+    </div>
+  </main>
+
+  <footer class="rodape" id="rodape"></footer>
+
+  <script src="js/data.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/checkout.js"></script>
+</body>
+</html>
