@@ -26,6 +26,157 @@ const IMAGEM = (id, w = 900) =>
   `https://images.unsplash.com/${id}?auto=format&fit=crop&w=${w}&q=80`;
 
 const PRODUTOS = [
+  /* ---------- peças reais do estoque Bella (fotos da loja) ---------- */
+  {
+    id: "conjunto-preto-babados",
+    nome: "Conjunto Preto Babados",
+    categoria: "Conjuntos",
+    preco: 189.9,
+    novidade: true,
+    promo: false,
+    destaque: false,
+    estoque: true,
+    cores: ["Preto"],
+    tamanhos: ["P", "M", "G"],
+    esgotados: [],
+    imagens: ["assets/produtos/conjunto-preto-babados.jpg"],
+    resumo:
+      "Blusa de manga bufante com laços e short de babados: o preto que resolve qualquer ocasião.",
+    descricao:
+      "Produção em duas peças em chiffon leve: blusa de manga bufante com laços nos punnos e decote alto, e short de babados que não marca e garante movimento. Um conjunto preto para noites, jantares e eventos — peça com salto fino e pronto.",
+    detalhes: {
+      Tecido: "Chiffon leve com forro",
+      Modelagem: "Blusa solta + short de babados",
+      Comprimento: "Curto",
+      Cuidados: "Lavar à mão em água fria. Não usar secadora.",
+    },
+    tags: ["preto", "conjunto", "festa", "novidade"],
+  },
+  {
+    id: "vestido-azul-marinho",
+    nome: "Vestido Azul Marinho Curto",
+    categoria: "Vestidos",
+    preco: 179.9,
+    novidade: true,
+    promo: false,
+    destaque: false,
+    estoque: true,
+    cores: ["Azul marinho"],
+    tamanhos: ["P", "M", "G"],
+    esgotados: [],
+    imagens: ["assets/produtos/vestido-azul-marinho.jpg"],
+    resumo:
+      "Babados em camadas, mangas bufantes e azul marinho que valoriza qualquer tom de pele.",
+    descricao:
+      "Vestido curto em azul marinho com gola alta, manga bufante e babados em camadas na barra. A cintura marcada e o tecido fluido criam movimento a cada passo — ideal para aniversários, happy hours e fins de semana especiais.",
+    detalhes: {
+      Tecido: "Viscose com forro",
+      Modelagem: "Curto, cintura marcada, manga bufante",
+      Comprimento: "Acima do joelho",
+      Cuidados: "Lavar à mão. Não usar secadora.",
+    },
+    tags: ["azul marinho", "festa", "curto", "novidade"],
+  },
+  {
+    id: "vestido-preto-ombro-unico",
+    nome: "Vestido Preto Ombro Único",
+    categoria: "Vestidos",
+    preco: 199.9,
+    novidade: true,
+    promo: false,
+    destaque: false,
+    estoque: true,
+    cores: ["Preto"],
+    tamanhos: ["P", "M", "G"],
+    esgotados: [],
+    imagens: ["assets/produtos/vestido-preto-ombro-unico.jpg"],
+    resumo:
+      "Ombro único com babado fluido: o preto clássico com caimento de festa.",
+    descricao:
+      "Vestido preto de ombro único com babado que cai do braço e alças transparentes no detalhe. Modelagem curta em chiffon com forro, que alonga as pernas e aceita qualquer acessório — do dourado ao prata.",
+    detalhes: {
+      Tecido: "Chiffon com forro",
+      Modelagem: "Ombro único, babado fluido",
+      Comprimento: "Curto",
+      Cuidados: "Lavar à mão em água fria. Passar do avesso.",
+    },
+    tags: ["preto", "festa", "noite", "novidade"],
+  },
+  {
+    id: "vestido-longo-caramelo",
+    nome: "Vestido Longo Halter Caramelo",
+    categoria: "Vestidos",
+    preco: 259.9,
+    novidade: true,
+    promo: false,
+    destaque: false,
+    estoque: true,
+    cores: ["Caramelo"],
+    tamanhos: ["P", "M", "G"],
+    esgotados: [],
+    imagens: ["assets/produtos/vestido-longo-caramelo.jpg"],
+    resumo:
+      "Gola halter, cintura marcada e babado na barra — o longo caramelo dos eventos.",
+    descricao:
+      "Vestido longo halter em tom caramelo com cintura destacada e babado na barra que dá movimento ao caimento. Decote gola que valoriza os ombros e tecido leve com caimento fluido — a escolha certa para casamentos e formaturas.",
+    detalhes: {
+      Tecido: "Viscose com toque fresquinho",
+      Modelagem: "Longo, halter, cintura marcada",
+      Comprimento: "Comprimento total",
+      Cuidados: "Lavar à mão. Secar na sombra.",
+    },
+    tags: ["caramelo", "festa", "longo", "novidade"],
+  },
+  {
+    id: "vestido-longo-vinho",
+    nome: "Vestido Longo Vinho com Renda",
+    categoria: "Vestidos",
+    preco: 249.9,
+    novidade: true,
+    promo: false,
+    destaque: false,
+    estoque: true,
+    cores: ["Vinho"],
+    tamanhos: ["P", "M", "G"],
+    esgotados: [],
+    imagens: ["assets/produtos/vestido-longo-vinho.jpg"],
+    resumo:
+      "Renda nas alças e na barra, alças finas e tom vinho: romântico do jeito certo.",
+    descricao:
+      "Vestido longo em tom vinho com babados de renda no busto e na barra, alças finas ajustáveis e cintura solta que não marca. Um clima de noite romântica para jantares, aniversários e ocasiões especiais.",
+    detalhes: {
+      Tecido: "Viscose com acabamento em renda",
+      Modelagem: "Longo, alças finas, cintura solta",
+      Comprimento: "Comprimento total",
+      Cuidados: "Lavar à mão. Não torcer. Passar do avesso.",
+    },
+    tags: ["vinho", "renda", "festa", "novidade"],
+  },
+  {
+    id: "macacao-amarelo",
+    nome: "Macacão Amarelo",
+    categoria: "Vestidos",
+    preco: 169.9,
+    novidade: true,
+    promo: false,
+    destaque: false,
+    estoque: true,
+    cores: ["Amarelo"],
+    tamanhos: ["P", "M", "G"],
+    esgotados: [],
+    imagens: ["assets/produtos/macacao-amarelo.jpg"],
+    resumo:
+      "Decote sutiã, cintura estruturada e bolso: o amarelo suave para os dias quentes.",
+    descricao:
+      "Macacão curto em tom amarelo suave com decote sutiã, alças finas e cintura estruturada com babado. Tecido leve com bolso funcional — um look inteiro em uma peça para passeios, praia e dias ensolarados.",
+    detalhes: {
+      Tecido: "Viscose leve",
+      Modelagem: "Curto, decote sutiã, cintura marcada",
+      Comprimento: "Curto com bolso",
+      Cuidados: "Lavar à mão em água fria. Secar na sombra.",
+    },
+    tags: ["amarelo", "verão", "macacão", "novidade"],
+  },
   {
     id: "vestido-midi-rosa-queimado",
     nome: "Vestido Midi Rosa Queimado",
@@ -441,6 +592,18 @@ const PRODUTOS = [
   },
 ];
 
+/* Peças reais do estoque ficam no topo da vitrine: aparecem primeiro
+   nas novidades da home e na ordenação padrão do catálogo. */
+const PECAS_REAIS = new Set([
+  "conjunto-preto-babados",
+  "vestido-azul-marinho",
+  "vestido-preto-ombro-unico",
+  "vestido-longo-caramelo",
+  "vestido-longo-vinho",
+  "macacao-amarelo",
+]);
+PRODUTOS.sort((a, b) => Number(PECAS_REAIS.has(b.id)) - Number(PECAS_REAIS.has(a.id)));
+
 const CATEGORIAS = [...new Set(PRODUTOS.map((p) => p.categoria))];
 const CORES = [...new Set(PRODUTOS.flatMap((p) => p.cores))].sort((a, b) =>
   a.localeCompare(b, "pt-BR")
@@ -468,6 +631,9 @@ const CORES_COM_TOM = {
   Dourado: "#c9a24b",
   Estampado: "#c98fae",
   Caramelo: "#a4682f",
+  "Azul marinho": "#2e3a56",
+  Vinho: "#6b2338",
+  Amarelo: "#ece2a3",
 };
 
 /* Calcula o frete simulado pelo primeiro dígito do CEP */
