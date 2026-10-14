@@ -41,10 +41,11 @@ bella-boutique/
 
 ## Identidade visual
 
-- **Rosa queimado** (`#b4645a`) — cor principal de fundos e destaque
-- **Dourado-claro** (`#b3903f` / `#d9c287`) — detalhes, selos e acentos
-- **Branco quente, creme e nude** — áreas de apoio e respiro
-- Tipografia: **Playfair Display** (títulos) + **Jost** (texto funcional)
+- **Marrom taupe** (`#806b63`) — cor principal de fundos, botões e destaque
+- **Off-white rosado** (`#f2e7e2`) — lettering, áreas de destaque e textos sobre fundos escuros
+- **Bronze areia** (`#8f7761` / `#cbb9a4`) — detalhes, selos e acentos discretos
+- **Creme e nude** — áreas de apoio e respiro
+- Tipografia: **Playfair Display** (títulos, serifa Didone de alto contraste) + **Jost** (texto funcional)
 
 ## Como personalizar
 

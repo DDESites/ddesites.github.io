@@ -26,8 +26,8 @@ function bellaImgFalha(img) {
 function logoBella() {
   return `<svg class="logo-svg" viewBox="0 0 720 567" role="img"
       aria-label="Bella Boutique — Moda Feminina by Sandy" focusable="false">
-    <rect width="720" height="567" fill="#7c685c"></rect>
-    <g fill="#f7efe7" font-family="'Playfair Display', Georgia, 'Times New Roman', serif" text-anchor="middle">
+    <rect width="720" height="567" fill="#806b63"></rect>
+    <g fill="#f2e7e2" font-family="'Playfair Display', Georgia, 'Times New Roman', serif" text-anchor="middle">
       <text x="360" y="272" font-size="152" letter-spacing="10">BELLA</text>
       <text x="360" y="408" font-size="130" letter-spacing="4">BOUTIQUE</text>
       <text x="360" y="478" font-size="30" letter-spacing="7">MODA FEMININA</text>
