@@ -1,0 +1,12 @@
+# Artefatos de sistema
+Thumbs.db
+Desktop.ini
+.DS_Store
+
+# Editor
+.vscode/
+.idea/
+*.swp
+
+# Pastas de build/node (caso venha a usar no futuro)
+node_modules/
