@@ -8,8 +8,8 @@ const LOJA = {
   slogan: "Moda Feminina",
   cidade: "Águas Lindas de Goiás",
   estado: "GO",
-  whatsapp: "5561999999999", // TODO: trocar pelo WhatsApp oficial da loja
-  whatsappExibicao: "(61) 99999-9999",
+  whatsapp: "556196192768", // somente números, com DDI e DDD
+  whatsappExibicao: "(61) 9619-2768",
   instagram: "https://www.instagram.com/bellaboutiquebysandy/",
   instagramHandle: "@bellaboutiquebysandy",
   seguidores: "6.180",
