@@ -130,16 +130,8 @@ h1, h2, h3, h4 {
 }
 .menu-hamburguer { display: none; }
 
-.marca { display: flex; align-items: center; gap: 0.7rem; text-decoration: none; }
-.marca img { border-radius: 10px; }
-.marca-nome {
-  display: block; font-family: var(--fonte-titulo);
-  font-size: 1.35rem; color: var(--texto); line-height: 1.1;
-}
-.marca-assinatura {
-  display: block; font-size: 0.7rem; letter-spacing: 0.32em;
-  text-transform: uppercase; color: var(--dourado);
-}
+.marca { display: flex; align-items: center; text-decoration: none; }
+.marca .logo-svg { height: 54px; width: auto; display: block; border-radius: 4px; }
 
 .nav-principal { display: flex; gap: 1.5rem; margin-left: auto; }
 .nav-principal a {
@@ -368,7 +360,7 @@ h1, h2, h3, h4 {
 .rodape a:hover { color: var(--dourado-claro); }
 .rodape-grade { display: grid; grid-template-columns: 1.4fr 1fr 1fr 1.2fr; gap: 2rem; }
 .rodape ul { list-style: none; margin: 0; padding: 0; display: grid; gap: 0.5rem; font-size: 0.92rem; }
-.rodape .marca-nome { color: var(--branco); }
+.rodape .marca .logo-svg { height: 66px; }
 .rodape-contato li { display: flex; gap: 0.6rem; align-items: center; }
 .rodape-contato svg { width: 17px; height: 17px; color: var(--dourado-claro); flex-shrink: 0; }
 .rodape-redes { display: flex; gap: 0.7rem; margin-top: 1rem; }

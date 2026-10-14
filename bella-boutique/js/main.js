@@ -22,6 +22,20 @@ function bellaImgFalha(img) {
   img.src = "assets/placeholder.svg";
 }
 
+/** Logotipo embutido (usa a fonte Playfair Display da própria página). */
+function logoBella() {
+  return `<svg class="logo-svg" viewBox="0 0 720 567" role="img"
+      aria-label="Bella Boutique — Moda Feminina by Sandy" focusable="false">
+    <rect width="720" height="567" fill="#7c685c"></rect>
+    <g fill="#f7efe7" font-family="'Playfair Display', Georgia, 'Times New Roman', serif" text-anchor="middle">
+      <text x="360" y="272" font-size="152" letter-spacing="10">BELLA</text>
+      <text x="360" y="408" font-size="130" letter-spacing="4">BOUTIQUE</text>
+      <text x="360" y="478" font-size="30" letter-spacing="7">MODA FEMININA</text>
+      <text x="360" y="518" font-size="26" letter-spacing="7">BY SANDY</text>
+    </g>
+  </svg>`;
+}
+
 const acharProduto = (id) => PRODUTOS.find((p) => p.id === id);
 
 /** Texto de parcelamento, quando aplicável. */
@@ -262,13 +276,7 @@ function montarCabecalho() {
     </div>
     <div class="container cabecalho-interno">
       <button class="icone-btn menu-hamburguer" data-abrir-menu aria-label="Abrir menu de navegação">${ICONES.menu}</button>
-      <a class="marca" href="index.html">
-        <img src="assets/logo.svg" alt="Logotipo da Bella Boutique" width="48" height="48">
-        <span>
-          <span class="marca-nome">Bella Boutique</span>
-          <span class="marca-assinatura">moda feminina</span>
-        </span>
-      </a>
+      <a class="marca" href="index.html">${logoBella()}</a>
       <nav class="nav-principal" aria-label="Menu principal">
         <a href="index.html"${marcaLink(pagina === "inicio")}>Início</a>
         <a href="catalogo.html?ordem=novidades">Novidades</a>
@@ -342,13 +350,7 @@ function montarRodape() {
     <div class="container">
       <div class="rodape-grade">
         <div>
-          <a class="marca" href="index.html">
-            <img src="assets/logo.svg" alt="Logotipo da Bella Boutique" width="52" height="52">
-            <span>
-              <span class="marca-nome">Bella Boutique</span>
-              <span class="marca-assinatura">moda feminina</span>
-            </span>
-          </a>
+          <a class="marca" href="index.html">${logoBella()}</a>
           <p style="margin-top:1rem">Moda feminina com elegância e cuidado — de ${esc(LOJA.cidade)} para todo o Brasil.</p>
           <div class="rodape-redes">
             <a href="${LOJA.instagram}" target="_blank" rel="noopener" aria-label="Instagram">${ICONES.instagram}</a>
